@@ -1,0 +1,11 @@
+export TOKEN=316010a4ad32b9ba4d1da58033d8ec17c7b15e753d64d602173d9ebf507729d8
+
+echo "name of VM"
+read VM
+
+
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer $TOKEN" -d '{"name":"'$VM'","region":"nyc3","size":"s-2vcpu-2gb","image":"ubuntu-18-04-x64","backups":false,"ipv6":false,"user_data":null,"private_networking":null,"volumes": null,"tags":["web"]}' "https://api.digitalocean.com/v2/droplets" 
+
+
+
+

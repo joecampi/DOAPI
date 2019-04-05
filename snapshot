@@ -1,0 +1,3 @@
+echo "name the snapshot"
+read snapshot
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer 316010a4ad32b9ba4d1da58033d8ec17c7b15e753d64d602173d9ebf507729d8" -d '{"type":"snapshot","name":"'$snapshot'"}' "https://api.digitalocean.com/v2/droplets/137812561/actions"

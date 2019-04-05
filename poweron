@@ -1,0 +1,5 @@
+export TOKEN=316010a4ad32b9ba4d1da58033d8ec17c7b15e753d64d602173d9ebf507729d8
+curl -X POST -H 'Content-Type: application/json' \
+    -H "Authorization: Bearer $TOKEN" \
+    -d '{"type":"power_on"}' \
+    "https://api.digitalocean.com/v2/droplets/137255341/actions"
